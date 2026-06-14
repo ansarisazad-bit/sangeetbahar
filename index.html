@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>संगीतबहार (Sangeetbahar) - संगीत सफ़र लाइव</title>
+    <title>संगीतबहार (Sangeetbahar) - संगीत सफर लाइव</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Yatra+One&display=swap" rel="stylesheet">
     <!-- FontAwesome for Icons -->
@@ -18,42 +18,57 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
+            /* आपके बैनर को ही धुंधला (Blur) करके बैकग्राउंड बनाया है ताकि लुक मैच करे */
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
+                        url('https://i.ibb.co/VWV3g4g0/sangeet-safar-3.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: #fff;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
             align-items: center;
+            justify-content: space-between;
         }
 
-        /* Top Banner Image Styling */
-        .banner-container {
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto 10px;
-            padding: 0 15px;
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-top: 25px;
+            padding: 10px;
         }
 
-        .banner-img {
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-            border: 2px solid #ffdf00;
+        header h1 {
+            font-family: 'Yatra One', cursive;
+            font-size: 3.2rem;
+            color: #ffdf00;
+            text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8);
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #ffdf00;
+            margin-top: 5px;
+            font-weight: 500;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.4);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
         }
 
         /* Main Player Card */
         .player-container {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             padding: 30px;
             border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
             text-align: center;
-            width: 90%;
-            max-width: 450px;
-            margin: 20px auto;
+            width: 92%;
+            max-width: 430px;
             transition: transform 0.3s ease;
         }
 
@@ -61,27 +76,47 @@
             transform: translateY(-5px);
         }
 
-        .vinyl-disc {
-            width: 130px;
-            height: 130px;
-            background: radial-gradient(circle, #333 40%, #111 41%, #000 100%);
-            border-radius: 50%;
-            margin: 0 auto 20px;
+        /* Banner Poster Container */
+        .banner-poster {
+            width: 100%;
+            border-radius: 15px;
+            border: 3px solid #ffdf00;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .vinyl-section {
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 4px solid #fff;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            gap: 15px;
+            margin-bottom: 20px;
+            background: rgba(0,0,0,0.3);
+            padding: 10px;
+            border-radius: 50px;
+        }
+
+        .vinyl-disc {
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle, #333 40%, #111 41%, #000 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
         }
 
         .vinyl-center {
-            width: 35px;
-            height: 35px;
+            width: 16px;
+            height: 16px;
             background-color: #ffdf00;
             border-radius: 50%;
         }
 
-        /* Vinyl Rotation */
+        /* Vinyl Rotation Animation */
         .rotate {
             animation: spin 3s linear infinite;
         }
@@ -90,12 +125,10 @@
             100% { transform: rotate(360deg); }
         }
 
-        .program-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #ffdf00;
-            letter-spacing: 1px;
+        .program-info {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #e2e8f0;
         }
 
         /* Audio Controls */
@@ -103,27 +136,27 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .play-btn {
             background-color: #ffdf00;
             border: none;
             color: #111;
-            width: 65px;
-            height: 65px;
+            width: 75px;
+            height: 75px;
             border-radius: 50%;
-            font-size: 1.6rem;
+            font-size: 2rem;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 5px 15px rgba(255, 223, 0, 0.3);
+            box-shadow: 0 6px 20px rgba(255, 223, 0, 0.45);
             transition: all 0.2s ease;
         }
 
         .play-btn:hover {
-            transform: scale(1.1);
+            transform: scale(1.08);
             background-color: #ffe853;
         }
 
@@ -132,24 +165,26 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-            color: #94a3b8;
+            gap: 12px;
+            margin-top: 15px;
+            background: rgba(0,0,0,0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
         }
 
         .volume-slider {
             -webkit-appearance: none;
-            width: 120px;
-            height: 5px;
-            background: rgba(255,255,255,0.2);
+            width: 140px;
+            height: 6px;
+            background: rgba(255,255,255,0.25);
             border-radius: 5px;
             outline: none;
         }
 
         .volume-slider::-webkit-slider-thumb {
             -webkit-appearance: none;
-            width: 14px;
-            height: 14px;
+            width: 16px;
+            height: 16px;
             background: #ffdf00;
             border-radius: 50%;
             cursor: pointer;
@@ -162,7 +197,7 @@
             color: #00e676;
             padding: 6px 18px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 500;
             margin-top: 20px;
             border: 1px solid rgba(0, 230, 118, 0.3);
@@ -174,56 +209,77 @@
             border-color: rgba(255, 145, 0, 0.3);
         }
 
-        /* Social Link Button */
+        /* Facebook Button Styling */
         .fb-btn {
-            display: inline-flex;
+            display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: center;
+            gap: 10px;
             background-color: #1877f2;
             color: white;
             text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-top: 15px;
-            transition: background 0.2s;
+            padding: 12px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(24, 119, 242, 0.4);
+            transition: all 0.2s ease;
         }
 
         .fb-btn:hover {
             background-color: #166fe5;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(24, 119, 242, 0.5);
         }
 
-        /* Footer */
+        /* Footer Styling */
         footer {
-            margin: auto 0 20px;
+            margin-bottom: 20px;
             text-align: center;
-            font-size: 0.85rem;
-            color: #64748b;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            background: rgba(0,0,0,0.5);
+            padding: 8px 20px;
+            border-radius: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            header h1 { font-size: 2.5rem; }
+            .player-container { padding: 20px 15px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Banner Section -->
-    <div class="banner-container">
-        <img src="sangeet safar _2.jpeg" alt="Sangeet Safar Banner" class="banner-img">
-    </div>
+    <!-- Header Section -->
+    <header>
+        <h1>संगीतबहार</h1>
+        <p><i class="fas fa-music"></i> संगीत सफर लाइव</p>
+    </header>
 
     <!-- Radio Player Card -->
     <div class="player-container">
-        <div class="vinyl-disc" id="disc">
-            <div class="vinyl-center"></div>
+        
+        <!-- आपका मुख्य प्रोग्राम बैनर -->
+        <img src="https://i.ibb.co/VWV3g4g0/sangeet-safar-3.jpg" alt="Sangeet Safar Banner" class="banner-poster">
+
+        <!-- विनाइल रिकॉर्ड एनीमेशन और शो की जानकारी -->
+        <div class="vinyl-section">
+            <div class="vinyl-disc" id="disc">
+                <div class="vinyl-center"></div>
+            </div>
+            <div class="program-info">रविवार से गुरुवार | 9:15 PM से</div>
         </div>
         
-        <div class="program-title"><i class="fas fa-broadcast-tower"></i> लाइव प्रसारण प्लेयर</div>
-        
-        <!-- Native Audio Element -->
+        <!-- Hidden Native Audio Element -->
         <audio id="radio-player" src="https://stream.zeno.fm/szfmr54krc9uv" preload="none"></audio>
 
-        <!-- Controls -->
+        <!-- Custom Controls -->
         <div class="controls">
             <button class="play-btn" id="play-trigger" onclick="togglePlay()">
-                <i class="fas fa-play" id="play-icon"></i>
+                <i class="fas fa-play" id="play-icon" style="margin-left: 5px;"></i>
             </button>
         </div>
 
@@ -235,17 +291,18 @@
         </div>
 
         <div>
-            <a href="https://facebook.com/sangeetbahar" target="_blank" class="fb-btn">
-                <i class="fab fa-facebook"></i> फेसबुक पेज पर जुड़ें
-            </a>
+            <div class="status-badge" id="status">सुनने के लिए प्ले बटन दबाएं</div>
         </div>
 
-        <div class="status-badge" id="status">सुनने के लिए प्ले बटन दबाएं</div>
+        <!-- आपका नया फेसबुक पेज बटन -->
+        <a href="https://www.facebook.com/share/192nyFqRiN/" target="_blank" class="fb-btn">
+            <i class="fab fa-facebook-f"></i> हमारे फेसबुक पेज से जुड़ें
+        </a>
     </div>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2026 संगीतबहार | सर्वाधिकार सुरक्षित</p>
+        <p>&copy; 2026 संगीतबहार रेडियो | सर्वाधिकार सुरक्षित</p>
     </footer>
 
     <!-- Audio Player Logic JavaScript -->
@@ -261,11 +318,12 @@
                 statusBadge.innerText = "कनेक्ट हो रहा है...";
                 statusBadge.className = "status-badge buffering";
                 
-                audio.load(); 
+                audio.load(); // Fresh loading to clear lag
                 
                 audio.play()
                     .then(() => {
                         playIcon.className = "fas fa-pause";
+                        playIcon.style.marginLeft = "0px";
                         disc.classList.add('rotate');
                         statusBadge.innerText = "● लाइव प्रसारण चालू है";
                         statusBadge.className = "status-badge";
@@ -277,6 +335,7 @@
             } else {
                 audio.pause();
                 playIcon.className = "fas fa-play";
+                playIcon.style.marginLeft = "5px";
                 disc.classList.remove('rotate');
                 statusBadge.innerText = "प्रसारण रुका हुआ है";
                 statusBadge.className = "status-badge buffering";
