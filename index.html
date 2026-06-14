@@ -18,9 +18,9 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            /* आपके बैनर को ही धुंधला (Blur) करके बैकग्राउंड बनाया है ताकि लुक मैच करे */
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
-                        url('https://i.ibb.co/VWV3g4g0/sangeet-safar-3.jpg') no-repeat center center fixed;
+            /* आपके साजाद बैनर को ही बैकग्राउंड में एक खूबसूरत डार्क लुक दिया है */
+            background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.96)), 
+                        url('https://i.ibb.co/6R2byX9N/sazad.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
             display: flex;
@@ -51,8 +51,8 @@
             margin-top: 5px;
             font-weight: 500;
             text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-            background: rgba(0, 0, 0, 0.4);
-            padding: 5px 15px;
+            background: rgba(0, 0, 0, 0.45);
+            padding: 6px 18px;
             border-radius: 20px;
             display: inline-block;
         }
@@ -63,12 +63,12 @@
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 30px;
+            padding: 25px;
             border-radius: 25px;
             box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
             text-align: center;
             width: 92%;
-            max-width: 430px;
+            max-width: 440px;
             transition: transform 0.3s ease;
         }
 
@@ -81,7 +81,7 @@
             width: 100%;
             border-radius: 15px;
             border: 3px solid #ffdf00;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.6);
             margin-bottom: 20px;
             display: block;
         }
@@ -92,14 +92,15 @@
             justify-content: center;
             gap: 15px;
             margin-bottom: 20px;
-            background: rgba(0,0,0,0.3);
-            padding: 10px;
+            background: rgba(0,0,0,0.4);
+            padding: 10px 20px;
             border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.05);
         }
 
         .vinyl-disc {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             background: radial-gradient(circle, #333 40%, #111 41%, #000 100%);
             border-radius: 50%;
             display: flex;
@@ -110,8 +111,8 @@
         }
 
         .vinyl-center {
-            width: 16px;
-            height: 16px;
+            width: 14px;
+            height: 14px;
             background-color: #ffdf00;
             border-radius: 50%;
         }
@@ -128,7 +129,8 @@
         .program-info {
             font-size: 1.1rem;
             font-weight: 500;
-            color: #e2e8f0;
+            color: #ffdf00;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
         }
 
         /* Audio Controls */
@@ -151,7 +153,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 6px 20px rgba(255, 223, 0, 0.45);
+            box-shadow: 0 6px 22px rgba(255, 223, 0, 0.5);
             transition: all 0.2s ease;
         }
 
@@ -167,7 +169,7 @@
             justify-content: center;
             gap: 12px;
             margin-top: 15px;
-            background: rgba(0,0,0,0.2);
+            background: rgba(0,0,0,0.25);
             padding: 8px 15px;
             border-radius: 20px;
         }
@@ -256,21 +258,21 @@
     <!-- Header Section -->
     <header>
         <h1>संगीतबहार</h1>
-        <p><i class="fas fa-music"></i> संगीत सफर लाइव</p>
+        <p><i class="fas fa-broadcast-tower"></i> संगीत सफर लाइव</p>
     </header>
 
     <!-- Radio Player Card -->
     <div class="player-container">
         
-        <!-- आपका मुख्य प्रोग्राम बैनर -->
-        <img src="https://i.ibb.co/VWV3g4g0/sangeet-safar-3.jpg" alt="Sangeet Safar Banner" class="banner-poster">
+        <!-- आपका नया साजाद बैनर (sazad.jpeg) -->
+        <img src="https://i.ibb.co/6R2byX9N/sazad.jpg" alt="Sangeet Safar sazad Banner" class="banner-poster">
 
         <!-- विनाइल रिकॉर्ड एनीमेशन और शो की जानकारी -->
         <div class="vinyl-section">
             <div class="vinyl-disc" id="disc">
                 <div class="vinyl-center"></div>
             </div>
-            <div class="program-info">रविवार से गुरुवार | 9:15 PM से</div>
+            <div class="program-info">Every Day | 9:15 PM - 11:15 PM</div>
         </div>
         
         <!-- Hidden Native Audio Element -->
@@ -296,13 +298,13 @@
 
         <!-- आपका नया फेसबुक पेज बटन -->
         <a href="https://www.facebook.com/share/192nyFqRiN/" target="_blank" class="fb-btn">
-            <i class="fab fa-facebook-f"></i> हमारे फेसबुक पेज से जुड़ें
+            <i class="fab fa-facebook-f"></i> Follow, Like & Share on Facebook
         </a>
     </div>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2026 संगीतबहार रेडियो | सर्वाधिकार सुरक्षित</p>
+        <p>&copy; 2026 संगीतबहार रेडियो | कलैया, बारा, नेपाल</p>
     </footer>
 
     <!-- Audio Player Logic JavaScript -->
